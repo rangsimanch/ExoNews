@@ -1,6 +1,6 @@
 
 # ใช้ภาพ Python เวอร์ชันล่าสุด
-FROM python:3.9-slim
+FROM python:3.14-rc-slim
 
 # ตั้งค่าตัวแปรสภาพแวดล้อม
 ENV PYTHONUNBUFFERED 1
