@@ -1,0 +1,81 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual Environments
+venv/
+env/
+ENV/
+venv.bak/
+venv/
+venv/*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyInstaller
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Logs and databases
+logs/
+*.log
+*.sqlite3
+
+# Mac OS files
+.DS_Store
+
+# Visual Studio Code settings
+.vscode/
+.vscode/*
+
+# PyCharm settings
+.idea/
+.idea/*
+
+# Environment variables
+.env
+.env.*
+
+# Build directories
+build/
+dist/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Other IDEs and editors
+*.swp
+*~
+Thumbs.db
+
+# Config files
+config.py
+
+# Docker files
+docker-compose.yml
+docker-compose.override.yml
+
+# Secrets (Make sure to not commit any sensitive information)
+secret.key
