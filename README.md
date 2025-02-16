@@ -135,3 +135,53 @@ uvicorn app.main:app --reload
  ```
 
 4. The application should now be running on `http://localhost:8000/`.
+
+
+## Configuration
+### Environment Variables
+The application relies on several environment variables for configuration. These can be set in the `.env` file or directly in your system's environment.
+
+- DATABASE_URL: Connection URL for the PostgreSQL database.
+- OPENAI_API_KEY: API key for OpenAI.
+- ASSISTANT_ID: ID of the assistant created in OpenAI's Assistant API.
+- RSS_FEEDS: Comma-separated list of RSS feed URLs to fetch news from.
+
+Example `.env` file:
+```DOTENV
+DATABASE_URL=postgresql://youruser:yourpassword@localhost:5432/yourdatabase
+OPENAI_API_KEY=your_openai_api_key
+ASSISTANT_ID=your_openai_assistant_id
+RSS_FEEDS=https://www.coindesk.com/arc/outboundfeeds/rss/,https://cointelegraph.com/rss,https://cryptoslate.com/feed/
+```
+
+**Important**: Keep your API keys and sensitive information secure. Do not commit them to version control.
+
+## Usage
+- When the application is running, it will automatically fetch news from the specified RSS feeds every 30 minutes.
+- It extracts the full article content and stores the news data in the news_rss table.
+- The service then processes the news articles by sending them to OpenAI's Assistant API for summarization.
+- Summarized news is stored in the news_ai table.
+- You can access the root endpoint at http://localhost:8000/ to verify the service is running.
+
+## Contributing
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch:
+```BASH
+git checkout -b feature/your-feature-name
+```
+
+3. Make your changes and commit them with descriptive messages.
+
+4. Push to your branch:
+```BASH
+git push origin feature/your-feature-name
+```
+
+5. Submit a pull request with a clear description of your changes.
+
+---
+
+***Disclaimer***: This project is intended for educational purposes. Make sure to comply with the terms of service of the RSS feed providers and OpenAI when using their services. Always handle API keys and sensitive information securely.
