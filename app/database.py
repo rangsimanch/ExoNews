@@ -14,3 +14,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # สร้าง Base สำหรับโมเดล
 Base = declarative_base()
+
+try:
+    conn = engine.connect()
+    print("✅ Database connection successful!")
+    conn.close()
+except Exception as e:
+    print(f"❌ Database connection failed: {e}")
+    
